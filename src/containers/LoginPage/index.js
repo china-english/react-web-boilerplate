@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 
-class LoginPage extends Component {
+class LoginPage extends Component { // eslint-disable-line
   render() {
     return (
       <div className="App">
@@ -9,7 +9,9 @@ class LoginPage extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          About To get started, edit <code>src/App.js</code> and save to reload.
+          About To get started, edit
+          <code>src/App.js</code>
+          and save to reload.
         </p>
       </div>
     );

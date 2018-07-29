@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Route,
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 import HomePage from './containers/HomePage';
 import LoginPage from './containers/LoginPage';
