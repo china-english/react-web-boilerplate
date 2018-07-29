@@ -1,29 +1,14 @@
-import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Link,
-} from 'react-router-dom';
+import React from 'react';
+import { Provider } from 'react-redux';
 
-import Routes from './Routes';
-import './App.css';
+import RootApp from './containers/RootApp';
 
-class App extends Component { // eslint-disable-line
-  render() {
-    return (
-      <Router className="App">
-        <div>
-          <header className="App-header">
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
+import store from './store';
 
-          <Link to="/">home</Link>
-          <Link to="/about">about</Link>
-          <Link to="/about/aboutWeb">about</Link>
-          <Routes />
-        </div>
-      </Router>
-    );
-  }
-}
+const App = () => (
+  <Provider store={store}>
+    <RootApp />
+  </Provider>
+);
 
 export default App;
