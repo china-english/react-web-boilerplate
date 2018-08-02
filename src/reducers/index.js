@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
 import {
   ADD_COUNTER,
@@ -27,4 +28,5 @@ export const appReducer = (state = initialState, action) => {
 
 export default combineReducers({
   app: appReducer,
+  form: formReducer,
 });
