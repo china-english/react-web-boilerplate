@@ -86,7 +86,6 @@ module.exports = {
        "always"
      ],
      "react/jsx-one-expression-per-line": 0,
-     "block-spacing": 2,
-     "allow-single-line": true
+     "block-spacing": 2
    }
 };
