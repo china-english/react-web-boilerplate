@@ -6,8 +6,8 @@ import {
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import NavigationBar from '../../components/NavigationBar';
-import Routes from '../../Routes';
+import NavigationBar from 'components/NavigationBar';
+import Routes from 'src/Routes';
 import {
   addCounter,
   minusCounter,

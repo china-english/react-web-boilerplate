@@ -42,8 +42,8 @@ const cssFilename = 'static/css/[name].[contenthash:8].css';
 // However, our output is structured with css, js and media folders.
 // To have this structure working with relative paths, we have to use custom options.
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
-  ? // Making sure that the publicPath goes back to to build folder.
-  { publicPath: Array(cssFilename.split('/').length).join('../') }
+// Making sure that the publicPath goes back to to build folder.
+  ? { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
 
 // This is the production configuration.
@@ -93,6 +93,11 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
+      src: path.resolve(__dirname, '../src'),
+      components: path.resolve(__dirname, '../src/components'),
+      containers: path.resolve(__dirname, '../src/containers'),
+      forms: path.resolve(__dirname, '../src/forms'),
+      reducers: path.resolve(__dirname, '../src/reducers'),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
