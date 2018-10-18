@@ -6,6 +6,7 @@ import {
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import NavigationBar from '../../components/NavigationBar';
 import Routes from '../../Routes';
 import {
   addCounter,
@@ -18,9 +19,7 @@ const RootApp = (props) => {
   return (
     <Router className="root-app">
       <div className="app">
-        <header className="app-header">
-          <h1 className="app-title">Welcome to React</h1>
-        </header>
+        <NavigationBar />
         {count}
         <button type="button" onClick={() => addCount()}>加</button>
         <button type="button" onClick={() => minusCount()}>减</button>
