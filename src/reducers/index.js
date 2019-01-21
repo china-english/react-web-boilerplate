@@ -4,7 +4,7 @@ import { reducer as formReducer } from 'redux-form';
 import {
   ADD_COUNTER,
   MINUS_COUNTER,
-} from '../containers/RootApp/constants';
+} from 'containers/RootApp/constants';
 
 const initialState = {
   test: '',

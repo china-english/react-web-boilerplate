@@ -12,7 +12,7 @@ import {
   addCounter,
   minusCounter,
 } from './actions';
-import './styles.css';
+import './styles.scss';
 
 const RootApp = (props) => {
   const { count, addCount, minusCount } = props;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.css';
+import './style.scss';
 
 class LoginPage extends Component { // eslint-disable-line
   render() {
@@ -8,6 +8,7 @@ class LoginPage extends Component { // eslint-disable-line
         <header className="App-header">
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <h1>LoginPage</h1>
         <p className="App-intro">
           About To get started, edit
           <code>src/App.js</code>

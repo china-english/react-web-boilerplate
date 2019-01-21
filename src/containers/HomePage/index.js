@@ -8,6 +8,7 @@ const HomePage = () => (
     <header className="app-header">
       <h1 className="app-title">Welcome to React</h1>
     </header>
+    <h1>HomePage</h1>
     <p className="app-intro">
       To get started, edit
       <code>src/App.js</code>

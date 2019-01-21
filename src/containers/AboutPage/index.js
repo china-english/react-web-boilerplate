@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './style.scss';
 
 const AboutPage = () => (
   <div className="App">
@@ -8,6 +8,7 @@ const AboutPage = () => (
         Welcome to React
       </h1>
     </header>
+    <h1>HomePage</h1>
     <p className="App-intro">
       HomePage1 To get started, edit
       <code>src/App.js</code>and save to reload.
