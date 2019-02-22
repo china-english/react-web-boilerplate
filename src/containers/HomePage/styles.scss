@@ -1,0 +1,47 @@
+.home-page {
+  min-height: inherit;
+  position: relative;
+  .img-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: inherit;
+  }
+  .gif-img {
+    width: 38vh;
+    height: 30vh;
+  }
+
+  .frame-image {
+    width: 42vh;
+    height: 34vh;
+  }
+
+  .img-mask {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: inherit;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .div-mask {
+    width: 38vh;
+    height: 30vh;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 1;
+    transition: opacity 1.5s;
+    p {
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+  .div-mask:hover {
+    opacity: 0.5;
+  }
+}

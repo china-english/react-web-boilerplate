@@ -1,20 +1,29 @@
 import React from 'react';
 
-import LoginForm from 'forms/LoginForm';
-import './style.scss';
+import catGif from './assets/cat.gif';
+import doItGif from './assets/doIt.gif';
+import frameImage from './assets/frame.png';
+import './styles.scss';
 
 const HomePage = () => (
-  <div className="app">
-    <header className="app-header">
-      <h1 className="app-title">Welcome to React</h1>
-    </header>
-    <h1>HomePage</h1>
-    <p className="app-intro">
-      To get started, edit
-      <code>src/App.js</code>
-      and save to reload.
-    </p>
-    <LoginForm onSubmit={(values) => console.log('will console form values', values)} />
+  <div className="home-page">
+    {window.setHelmet({ title: 'home' })}
+    <div className="img-group">
+      <img src={frameImage} alt="frameImage" className="frame-image" />
+      <img src={frameImage} alt="frameImage" className="frame-image" />
+    </div>
+    <div className="img-mask">
+      <img src={catGif} alt="catGif" className="gif-img" />
+      <img src={doItGif} alt="doItGif" className="gif-img" />
+    </div>
+    <div className="img-mask">
+      <div className="div-mask">
+        <p>基于 react 的 web 框架 <em><br /> react & redux & redux-form</em></p>
+      </div>
+      <div className="div-mask">
+        <p>版本号:<em> 0.0.1</em></p>
+      </div>
+    </div>
   </div>
 );
 

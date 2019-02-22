@@ -1,5 +1,6 @@
 import React from 'react';
-import './style.scss';
+
+import './styles.scss';
 
 const AboutPage = () => (
   <div className="App">

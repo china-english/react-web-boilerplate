@@ -233,7 +233,18 @@ module.exports = {
           },
           {
             test: /\.scss$/,
-            loaders: ['style-loader', 'css-loader', 'sass-loader'],
+            loaders: [
+              'style-loader',
+              'css-loader',
+              'sass-loader',
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  // Provide path to the file with resources
+                  resources: path.resolve(__dirname, '../src/styles/index.scss'),
+                },
+              },
+            ],
           },
           // ** STOP ** Are you adding a new loader?
           // Make sure to add the new loader(s) before the "file" loader.

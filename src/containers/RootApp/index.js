@@ -1,32 +1,38 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Link,
 } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
 import NavigationBar from 'components/NavigationBar';
+import GlobalFooter from 'components/GlobalFooter';
+
 import Routes from 'src/Routes';
+
 import {
   addCounter,
   minusCounter,
 } from './actions';
 import './styles.scss';
 
+window.setHelmet = (params) => <Helmet {...params} />;
+
 const RootApp = (props) => {
   const { count, addCount, minusCount } = props;
+  console.log(count, addCount, minusCount);
   return (
-    <Router className="root-app">
-      <div className="app">
+    <Router>
+      <div className="app-container">
         <NavigationBar />
-        {count}
-        <button type="button" onClick={() => addCount()}>加</button>
-        <button type="button" onClick={() => minusCount()}>减</button>
-        <Link to="/">home</Link>
-        <Link to="/about">about</Link>
-        <Link to="/about/aboutWeb">about</Link>
-        <Routes />
+        <div className="app-content">
+          <Routes />
+          {/* {count}
+          <button type="button" onClick={() => addCount()}>加</button>
+          <button type="button" onClick={() => minusCount()}>减</button> */}
+        </div>
+        <GlobalFooter />
       </div>
     </Router>
   );

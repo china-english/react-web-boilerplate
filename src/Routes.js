@@ -8,7 +8,7 @@ import LoginPage from './containers/LoginPage';
 import AboutPage from './containers/AboutPage';
 
 const Routes = () => (
-  <div>
+  <div className="route-div">
     <Route exact path="/" component={HomePage} />
     <Route path="/about" component={LoginPage} />
     <Route path="/about/:id" component={AboutPage} />
