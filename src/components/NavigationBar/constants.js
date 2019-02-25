@@ -5,7 +5,12 @@ export const MENU_BUTTON_LABEL = [
     path: '/',
   },
   {
-    label: '详情',
+    label: 'react',
+    key: 'details',
+    path: '/details',
+  },
+  {
+    label: 'vue',
     key: 'details',
     path: '/details',
   },

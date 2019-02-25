@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   position: fixed;
+  z-index: 9999;
   .navigation-bar-content {
     width: 80%;
     margin: auto;
@@ -31,6 +32,12 @@
   .bar-right {
     float: right;
   }
+  .all-bar-right {
+    display: none;
+  }
+  .omit-bar-right {
+    display: block;
+  }
   .menu-button {
     display: inline-block;
     min-width: 80px;
@@ -49,5 +56,17 @@
   .menu-button:active {
     background-color: $faintBlack;
     color: $black;
+  }
+
+  @include privat-respond-to('md') {
+    .all-bar-right {
+      display: block;
+    }
+    .omit-bar-right {
+      display: none;
+    }
+  }
+  @include privat-respond-to('sm') {
+
   }
 }

@@ -26,6 +26,29 @@ const NavigationBar = () => {
       </Link>
     );
   };
+  const renderAllBarRight = () => (
+    <div className="all-bar-right">
+      { MENU_BUTTON_LABEL.map((menuLabel, index) => menuButton(menuLabel, index)) }
+    </div>
+  );
+  const renderOmitBarRight = () => (
+    <div className="omit-bar-right">
+      <Link
+        to="./home"
+        className="menu-button"
+        onClick={() => console.log('菜单')}
+      >
+        菜单
+      </Link>
+    </div>
+  );
+  const renderBarRight = () => (
+    <div className="bar-right">
+      {renderAllBarRight()}
+      {renderOmitBarRight()}
+    </div>
+  );
+
   return (
     <header className="navigation-bar">
       <div className="navigation-bar-content">
@@ -34,10 +57,7 @@ const NavigationBar = () => {
             <img alt="logo" src={logoImage} className="logo" />
           </Link>
         </div>
-
-        <div className="bar-right">
-          {MENU_BUTTON_LABEL.map((menuLabel, index) => menuButton(menuLabel, index)) }
-        </div>
+        {renderBarRight()}
       </div>
     </header>
   );
